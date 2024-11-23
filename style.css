@@ -14,6 +14,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
 
 header {
@@ -47,8 +48,14 @@ nav ul li a {
     font-size: 18px;
 }
 
-nav ul li a:hover {
+a:hover {
     text-decoration: underline; /* Add hover effect */
+}
+
+video:hover {
+    filter: brightness(1.4);
+    transform: scale(1.01);
+    cursor: pointer;
 }
 
 main {
@@ -63,6 +70,7 @@ main div {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 main b {
@@ -109,7 +117,7 @@ h1, h2 {
 }
 
 button:hover {
-    filter: brightness(1.4);
+    filter: brightness(1.2);
     transform: scale(1.01);
     cursor: pointer;
 }
@@ -140,4 +148,17 @@ footer {
     flex: 1; /* Allow each PDF to take equal space */
     height: 90vh; /* Adjust height to fit within the viewport */
     border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+}
+
+video {
+    transition: filter 0.3s ease, transform 0.3s ease; /* Ensure smooth transition */
+    object-fit: cover; /* Keeps the video scaling properly */
+    width: 100%; /* Make sure the video covers the entire container */
+    height: 100%; /* Full height for the container */
+}
+
+video:hover {
+    filter: brightness(1.2); /* Increase brightness on hover */
+    transform: scale(1.02);  /* Slightly enlarge the video on hover */
+    cursor: pointer;        /* Change cursor to pointer to indicate interactivity */
 }

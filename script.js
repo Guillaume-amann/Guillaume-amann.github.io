@@ -1,3 +1,4 @@
+// Slide Functionality
 const slides = document.querySelector('.slides');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
@@ -26,3 +27,11 @@ nextButton.addEventListener('click', () => {
 });
 
 updateSlide();
+
+// Mobile Dropdown Menu Functionality
+const toggleButton = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Toggle the "show" class to display the menu
+});

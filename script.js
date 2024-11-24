@@ -29,9 +29,17 @@ nextButton.addEventListener('click', () => {
 updateSlide();
 
 // Mobile Dropdown Menu Functionality
-const toggleButton = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
 
-toggleButton.addEventListener('click', () => {
-    menu.classList.toggle('show'); // Toggle the "show" class to display the menu
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll(".navitem").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        menu.classList.remove("active");
+    }));
 });

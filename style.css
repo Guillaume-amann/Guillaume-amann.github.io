@@ -51,6 +51,15 @@ a:hover {
     text-decoration: underline;
 }
 
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
@@ -176,21 +185,16 @@ footer {
     font-style: normal;
 }
 
-/* Media Queries */
-@media (max-width: 1200px) {
-    .pdf-container object {
-        flex: 1 1 calc(100% / 3 - 20px);
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide desktop navigation on mobile */
     }
-}
 
-@media (max-width: 800px) {
-    .pdf-container object {
-        flex: 1 1 calc(100% / 2 - 20px);
+    #menu-toggle {
+        display: block; /* Show the toggle button on mobile */
     }
-}
 
-@media (max-width: 500px) {
-    .pdf-container object {
-        flex: 1 1 100%;
+    #menu {
+        display: none; /* Hide the dropdown menu by default on mobile */
     }
 }

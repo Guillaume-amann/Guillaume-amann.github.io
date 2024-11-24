@@ -1,119 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Financial</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/img/logo.png">
+    <link rel="apple-touch-icon" href="/docs/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <header>
+        <a href="index.html" id="home">Inicio<br>Financial</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="algo.html">AlgoTrading</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <title>Inicio Financial</title>
-
-        <link rel="icon" type="image/png" sizes="16x16" href="/docs/img/logo.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/docs/img/logo.png">
-        <link rel="apple-touch-icon" href="/docs/img/logo.png">
-
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-
-        <header>
-            <a href="index.html" id="home">Inicio<br>Financial</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="algo.html">AlgoTrading</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <h1>Credentials</h1>
-
-            <div class="section">
-                <div style="flex: 0 0 55%; padding: 20px;">
-                    <h2>Equity Research</h2><br>
-                    <p>
-                        We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund,
-                        conducted in-depth analysis of American stocks which can be found here.
-                    </p>
+    <main>
+        <h1>Credentials</h1>
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%; gap: 20px;">
+            <button id="prev" style="background: none; color: grey; font-size: x-large; border: none; cursor: pointer;">&#10094;</button>
+        
+            <!-- Slider Container -->
+            <div class="slider-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 20px; width: 80%;">
+                <!-- Slide 1 -->
+                <div class="slide" style="flex: 0 0 30%; background: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h2>Equity Research</h2>
+                    <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+                    <button onclick="location.href='page1.html'" style="display: block; width: 100%; height: 200px; background: url('docs/img/convert.jpg') no-repeat center center; background-size: cover; border-radius: 5px; border: none;"></button>
                 </div>
-                <button onclick="location.href='page1.html'" style="flex: 0 0 45%;
-                                                                    width: 0%;
-                                                                    height:auto;
-                                                                    aspect-ratio: 16 / 9;
-                                                                    background: url('docs/img/convert.jpg') no-repeat center center; 
-                                                                    background-size: cover; 
-                                                                    border: none; 
-                                                                    border-radius: 5px;">
-                </button>
-            </div>
-
-            <div class="section">
-                <div style="flex: 0 0 45%; position: relative; border-radius: 5px; overflow: hidden;border: none;">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto;aspect-ratio: 16 / 9; object-fit: cover;border: none;">
-                        <source src="docs/movie.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <button onclick="location.href='page2.html'" 
-                            style="width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; 
-                                transform: translate(-50%, -50%); 
-                                background: none;
-                                opacity: 0;
-                                z-index: 1;">
-                    </button>
+                <!-- Slide 2 -->
+                <div class="slide" style="flex: 0 0 30%; background: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h2>Slide Title 2</h2>
+                    <p>Content for the second slide goes here. You can customize this text and layout as needed.</p>
+                    <button onclick="location.href='page2.html'" style="display: block; width: 100%; height: 200px; background: url('docs/img/slide2.jpg') no-repeat center center; background-size: cover; border-radius: 5px; border: none;"></button>
                 </div>
-                <div style="flex: 0 0 55%; padding: 20px;">
-                    <h2>Statistical & Machine Learning</h2><br>
-                    <p>
-                        We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund,
-                        conducted in-depth analysis of American stocks which can be found here.
-                    </p>
+                <!-- Slide 3 -->
+                <div class="slide" style="flex: 0 0 30%; background: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h2>Slide Title 3</h2>
+                    <p>Content for the third slide goes here. Customize the layout to your liking.</p>
+                    <button onclick="location.href='page3.html'" style="display: block; width: 100%; height: 200px; background: url('docs/img/slide3.jpg') no-repeat center center; background-size: cover; border-radius: 5px; border: none;"></button>
                 </div>
             </div>
+        
+            <button id="next" style="background: none; color: grey; font-size: x-large; border: none; cursor: pointer;">&#10095;</button>
+        </div>
+<!--         
+        <div style="display:flex;justify-content:space-between;width:100%;">
+            <button id="prev" style="background: none;color:grey;font-size: x-large;">&#10094;</button>
+            <div class="slider-container">
+                <div class="slides">
+  
+                    <div class="slide" id="s1">
+                        <div style="flex: 0 0 55%;">
+                            <h2>Equity Research</h2>
+                            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+                        </div>
+                        <div style="flex: 0 0 45%;">
+                            <button onclick="location.href='page1.html'" style="flex: 0 0 45%; height:auto; aspect-ratio: 16 / 9; background: url('docs/img/convert.jpg') no-repeat center center; background-size: cover; border-radius: 5px;"></button>
+                        </div>
+                    </div>
 
-            <div class="section">
-                <div style="flex: 0 0 55%; padding: 20px;">
-                    <h2>Quant Library</h2><br>
-                    <p>
-                        We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund,
-                        conducted in-depth analysis of American stocks which can be found here.
-                    </p>
+                    <div class="slide" id="s2">
+                        <div style="flex: 0 0 55%;">
+                            <h2>Statistical & Machine Learning</h2>
+                            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+                        </div>
+                        <div style="flex: 0 0 45%;">
+                            <video autoplay muted loop playsinline style="height: auto; aspect-ratio: 16 / 9; object-fit: cover;">
+                                <source src="docs/movie.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button onclick="location.href='page2.html'" style="height: auto; position: absolute; aspect-ratio: 16 / 9; background: none; opacity: 0; z-index: 1;"></button>
+                        </div>
+                    </div>
+
+                    <div class="slide" id="s3">
+                        <div style="flex: 0 0 55%;">
+                            <h2>Quant Library</h2>
+                            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+                        </div>
+                        <button onclick="location.href='algo.html'" style="flex: 0 0 45%;height:auto; aspect-ratio: 16 / 9; background: url('docs/img/overview.jpg') no-repeat center center; background-size: cover; border-radius: 5px;"></button>
+                    </div>
                 </div>
-                <button onclick="location.href='algo.html'" style="flex: 0 0 45%;
-                                                                    width: 0%;
-                                                                    height:auto;
-                                                                    aspect-ratio: 16 / 9;
-                                                                    background: url('docs/img/overview.jpg') no-repeat center center; 
-                                                                    background-size: cover; 
-                                                                    border: none; 
-                                                                    border-radius: 5px;">
-                </button>
             </div>
 
-            <div class="section">
-                <button class="custom-button" onclick="location.href='page1.html'">Stock Pitches</button>
-                <button class="custom-button" onclick="location.href='page2.html'">Statistical & Machine Learning</button>
-                <button class="custom-button" onclick="location.href='algo.html'">Quant Library</button>
-            </div>
+            <button id="next" style="background: none;color:grey;font-size: x-large;">&#10095;</button>
+        </div> 
+        
+        -->
 
-            <div>
-                <h2 id="about">About Us</h2>
-                <p>At <b>Around the World</b>, we are a team of passionate travelers dedicated to helping our clients experience the world. With years of experience in the travel industry, our knowledgeable staff will work with you to plan and book your next journey.</p>
-            </div>
 
-            <div>
-                <h2 id="contact">Contact us</h2>
-                <p>Tel: +33646196593</p>
-            </div>
 
-        </main>
 
-        <footer>
-            <p>This is the footer</p>
-        </footer>
 
-    </body>
 
+        
+        <div>
+            <button class="custom-button" onclick="location.href='page1.html'">Stock Pitches</button>
+            <button class="custom-button" onclick="location.href='page2.html'">Statistical & Machine Learning</button>
+            <button class="custom-button" onclick="location.href='algo.html'">Quant Library</button>
+        </div>
+
+        <div>
+            <h2 id="about">About Us</h2>
+            <p>At <b>Around the World</b>, we are a team of passionate travelers dedicated to helping our clients experience the world. With years of experience in the travel industry, our knowledgeable staff will work with you to plan and book your next journey.</p>
+        </div>
+
+        <div>
+            <h2 id="contact">Contact us</h2>
+            <p>Tel: +33646196593</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

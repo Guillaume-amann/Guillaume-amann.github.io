@@ -37,7 +37,7 @@ header {
 }
 
 .navbar {
-    height: 15vh;
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3vw;
+    gap: 30px;
     list-style: none;
 }
 

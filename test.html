@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Header with Gradient</title>
+  <style>
+    /* General styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(45deg, #000C47, #011893);
+      color: white;
+      padding: 0.5rem 1rem;
+      position: relative;
+      overflow: hidden; /* Ensures smooth scaling */
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      margin-left: 1rem;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-menu li {
+        margin: 0;
+        width: 100%;
+      }
+
+      .nav-menu a {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav.open {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <a href="#" class="brand">BrandName</a>
+      <button class="hamburger" id="hamburger">
+        &#9776;
+      </button>
+    </div>
+    <nav class="nav" id="nav">
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    document.getElementById("hamburger").addEventListener("click", () => {
+      const nav = document.getElementById("nav");
+      nav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

@@ -86,7 +86,7 @@ body, html {
 
 main {
     max-width: 1200px;
-    margin: 0 10vw;
+    padding: 20px 10vw;
     background-color: #f4f4f4;
 }
 
@@ -106,9 +106,8 @@ main {
 }
 
 #slides {
-    padding: 10px;
-    border: 1px solid black;
-    background: grey;
+    padding: 0;
+    background: none;
     position: relative;
     z-index: 1;
 }
@@ -135,19 +134,16 @@ main {
 }
 
 #slides .inner {
-    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition: margin-left 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
     line-height: 0;
-    height: 60vh;
+    height: 400px;
 }
 
 #slides .slide {
     width: 25%;
     float: left;
     display: block;
-}
-
-#slides .slide1 {
     background-color: red;
 }
 
@@ -156,7 +152,7 @@ main {
 }
 
 #controls {
-    margin: -180px 0 0 0;
+    margin: -155px 0 0 0;
     height: 50px;
     z-index: 3;
     position: relative;
@@ -164,11 +160,12 @@ main {
 
 #controls label {
     transition: opacity 0.2s ease-out;
+    background: none;
     display: none;
     position: relative;
-    top: -50%;
+    top: -245px;
     width: 50px;
-    height: 60vh;
+    height: 400px;
     opacity: .4;
 }
 
@@ -176,44 +173,51 @@ main {
     opacity: 1;
 }
 
+#bullets {
+    margin: 150px 0 0;
+    text-align: center;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+}
+
 #slide1:checked ~ #controls label:nth-child(2),
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
-   background: url(https://static.vecteezy.com/system/resources/thumbnails/000/379/577/small/Basic_Elements__28114_29.jpg) no-repeat;
-   float: right;
-   background-size: contain;
-   margin: 0 -50px 0 0;
-   display: block;
+    background: url(docs/img/ra.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
 }
-#slide1:checked ~ #controls label:nth-last-child(2),
-#slide2:checked ~ #controls label:nth-last-child(3),
-#slide3:checked ~ #controls label:nth-last-child(4),
-#slide4:checked ~ #controls label:nth-last-child(1) {
-   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuwFYGl859TlHkUrVFmrAvNWAOtPby6ZgWMg&s) no-repeat;
-   float: left;
-   margin: 0 0 0 -50px;
-   display: block;
-   background-size: contain;
+
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
+    background: url(docs/img/la.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
 }
-#bullets {
-   margin: 150px 0 0;
-   text-align: center;
-}
-#bullets label {
-   display: inline-block;
-   width: 10px;
-   height: 10px;
-   border-radius:100%;
-   background: #ccc;
-   margin: 0 10px;
-}
+
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4) {
-   background: #444;
+    background: #444;
 }
+
 
 
 
@@ -332,6 +336,12 @@ footer {
     justify-content: center;
 }
 
+
+
+
+
+
+
 /* Font Definitions */
 @font-face {
     font-family: 'avenir_next_lt_proregular';
@@ -358,14 +368,12 @@ footer {
         transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     }
 
-    /* Visible state for .nav when open */
     .nav.open {
         max-height: 500px; /* Adjust based on menu height */
         opacity: 1;
         transform: translateY(0); /* Bring it into view */
     }
 
-    /* Update .nav-menu styles */
     .nav-menu {
         display: flex;
         flex-direction: column; /* Stack items in a column */
@@ -385,10 +393,6 @@ footer {
         padding: 5px;
         text-align: center; /* Adjust alignment if needed */
     }
-    
-
-
-
 
     .hamburger {
         display: block;
@@ -408,5 +412,45 @@ footer {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #controls {
+        margin: -155px 0 0 0;
+        height: 50px;
+        z-index: 3;
+        position: relative;
+    }
+
+    #controls label {
+        transition: opacity 0.2s ease-out;
+        background: none;
+        display: none; /* Ensure labels are visible */
+        position: relative; /* Reset positioning */
+        margin-top: -120px;
+        margin-left: 50px;
+        width: 40px; /* Adjust size for smaller screens */
+        height: 400px; /* Adjust size for smaller screens */
+        opacity: .4;
+    }
+
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+
+    #slide1:checked ~ #controls label:nth-last-child(1),
+    #slide2:checked ~ #controls label:nth-last-child(4),
+    #slide3:checked ~ #controls label:nth-last-child(3),
+    #slide4:checked ~ #controls label:nth-last-child(2) {
+        background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+        float:left;
+        margin: 0 0 0 0;
+        display: block;
     }
 }

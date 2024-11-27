@@ -23,9 +23,9 @@
         <nav class="nav" id="nav">
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="algo.html">Contact</a></li>
+            <li><a href="page1.html">Equity</a></li>
+            <li><a href="page2.html">AI</a></li>
+            <li><a href="algo.html">Quant Lib</a></li>
           </ul>
         </nav>
       </header>
@@ -33,8 +33,9 @@
 
 
 
-    <main style="border: 1px solid black">
+    <main>
         <h1>Credentials</h1>
+        <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
 
         <div id="slider">
             <input type="radio" name="slider" id="slide1" checked>
@@ -47,19 +48,25 @@
                         <div class="slide slide1">
                             <div class="slide-content">
                                 <h2>Equity Research</h2>
-                                <p>text</p>
+                                <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+                                <button onclick="location.href='page1.html'" class="r r1"></button>
                             </div>
                         </div>
                         <div class="slide slide2">
                             <div class="slide-content">
                                 <h2>Statistical & Machine Learning</h2>
                                 <p>text</p>
+                                <video autoplay muted loop playsinline id="mov" class="rmov">
+                                    <source src="docs/movie.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                         <div class="slide slide3">
                             <div class="slide-content">
                                 <h2>Quant Library</h2>
                                 <p>text</p>
+                                <button onclick="location.href='algo.html'" class="r r3"></button>
                             </div>
                         </div>
                         <div class="slide slide4">
@@ -72,61 +79,24 @@
                 </div>
             </div>
             <div id="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
+                <label for="slide1" onclick=resetSlider()></label>
+                <label for="slide2" onclick=resetSlider()></label>
+                <label for="slide3" onclick=resetSlider()></label>
+                <label for="slide4" onclick=resetSlider()></label>
             </div>
             <div id="bullets">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
+                <label for="slide1" onclick=resetSlider()></label>
+                <label for="slide2" onclick=resetSlider()></label>
+                <label for="slide3" onclick=resetSlider()></label>
+                <label for="slide4" onclick=resetSlider()></label>
             </div>
         </div>
+    </main>
         
         
-        <!-- <div style="display:flex;justify-content:space-between;width:100%;">
-            <button id="prev" style="background: none;color:grey;font-size: x-large;">&#10094;</button>
-            <div class="slider-container">
-                <div class="slides">
-  
-                    <div class="slide" id="s1">
-                        <div style="flex: 0 0 55%;">
-                            <h2>Equity Research</h2>
-                            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
-                        </div>
-                        <div style="flex: 0 0 45%;">
-                            <button onclick="location.href='page1.html'" style="flex: 0 0 45%; height:auto; aspect-ratio: 16 / 9; background: url('docs/img/convert.jpg') no-repeat center center; background-size: cover; border-radius: 5px;"></button>
-                        </div>
-                    </div>
 
-                    <div class="slide" id="s2">
-                        <div style="flex: 0 0 55%;">
-                            <h2>Statistical & Machine Learning</h2>
-                            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
-                        </div>
-                        <div style="flex: 0 0 45%;">
-                            <video autoplay muted loop playsinline style="height: auto; aspect-ratio: 16 / 9; object-fit: cover;">
-                                <source src="docs/movie.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <button onclick="location.href='page2.html'" style="height: auto; position: absolute; aspect-ratio: 16 / 9; background: none; opacity: 0; z-index: 1;"></button>
-                        </div>
-                    </div>
-
-                    <div class="slide" id="s3">
-                        <div style="flex: 0 0 55%;">
-                            <h2>Quant Library</h2>
-                            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
-                        </div>
-                        <button onclick="location.href='algo.html'" style="flex: 0 0 45%;height:auto; aspect-ratio: 16 / 9; background: url('docs/img/overview.jpg') no-repeat center center; background-size: cover; border-radius: 5px;"></button>
-                    </div>
-                </div>
-            </div>
-
-            <button id="next" style="background: none;color:grey;font-size: x-large;">&#10095;</button>
-        </div>  -->
+                    
+        
     
 
 

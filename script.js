@@ -50,3 +50,7 @@ function navigateSlider() {
         newIndex = 0; // Reset to the first slide
     }
 }
+
+document.getElementById("mov").addEventListener("click", function () {
+    window.location.href = "page2.html";
+  });

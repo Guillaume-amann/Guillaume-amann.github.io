@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Inicio Financial</title>
-
         <link rel="icon" type="image/png" sizes="16x16" href="/docs/img/logo.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/docs/img/logo.png">
         <link rel="apple-touch-icon" href="/docs/img/logo.png">
-
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-
-        <header>
-            <a href="index.html" style="text-decoration:none;font-size:32px; font-weight:400;color:#f4f4f4;line-height: 0.9;margin:50px;font-family: 'Times New Roman', Times, serif;">Inicio<br>Financial</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="algo.html">AlgoTrading</a></li>
-                </ul>
+        <header class="header">
+            <div class="header-top">
+            <a href="index.html" class="brand">Inicio<br>Financial</a>
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            </div>
+            <nav class="nav" id="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page1.html">Equity</a></li>
+                <li><a href="page2.html">AI</a></li>
+                <li><a href="algo.html">Quant Lib</a></li>
+            </ul>
             </nav>
         </header>
-        
+
         <main>
             <button class="back-button" onclick="location.href='index.html'">Back</button>
             <div class="pdf-container" style="margin-top: 20px;">
-                <object data="docs/FinalReport.pdf" type="application/pdf">
-                    <p>PDF cannot be displayed. <a href="docs/FinalReport.pdf" target="_blank">Download the PDF</a>.</p>
+                <object data="docs/pdf/GDP.pdf" type="application/pdf">
+                    <p>PDF cannot be displayed. <a href="docs/pdf/GDP.pdf" target="_blank">Download the PDF</a>.</p>
                 </object>
-                <object data="docs/CID02492153-Research Paper-Graham.pdf" type="application/pdf">
-                    <p>PDF cannot be displayed. <a href="docs/CID02492153-Research Paper-Graham.pdf" target="_blank">Download the PDF</a>.</p>
+                <object data="docs/pdf/Research.pdf" type="application/pdf">
+                    <p>PDF cannot be displayed. <a href="docs/pdf/Research.pdf" target="_blank">Download the PDF</a>.</p>
                 </object>
             </div>
         </main>
 
-        <footer>
-            <p>This is the footer</p>
-        </footer>
 
+        <script src="script.js"></script>
     </body>
-
 </html>

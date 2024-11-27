@@ -90,12 +90,6 @@ main {
     background-color: #f4f4f4;
 }
 
-#slider {
-    margin: 0 auto;
-    max-width: 100%;
-    text-align: center;
-}
-
 #slider input[type=radio] {
     display: none;
 }
@@ -136,19 +130,20 @@ main {
 #slides .inner {
     transition: margin-left 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
-    line-height: 0;
     height: 400px;
 }
 
 #slides .slide {
     width: 25%;
+    height: 100%;
     float: left;
-    display: block;
-    background-color: red;
 }
 
 .slide-content {
-    padding: 10px;
+    position: relative;
+    padding: 0 50px;
+    height: 100%;
+    max-width: 100%;
 }
 
 #controls {
@@ -174,7 +169,7 @@ main {
 }
 
 #bullets {
-    margin: 150px 0 0;
+    margin: 130px 0 0;
     text-align: center;
 }
 
@@ -182,7 +177,7 @@ main {
     display: inline-block;
     width: 10px;
     height: 10px;
-    border-radius:100%;
+    border-radius: 100%;
     background: #ccc;
     margin: 0 10px;
 }
@@ -223,6 +218,39 @@ main {
 
 
 
+.r {
+    width: 300px;
+    aspect-ratio: 3/2;
+    border-radius: 5px;
+    border: none;
+}
+
+.r1 {
+    background: url('docs/img/convert.jpg') no-repeat center center; 
+    background-size: contain; 
+}
+
+.rmov {
+    width: 300px;
+    aspect-ratio: 3/2;
+    border-radius: 5px;
+    border: none;
+}
+
+.r3 {
+    background: url('docs/img/overview.jpg') no-repeat center center; 
+    background-position: bottom;
+    background-size: contain; 
+}
+
+.r4 {
+    background: url('docs/img/convert.jpg') no-repeat center center; 
+    background-size: contain; 
+}
+
+
+
+
 
 
 
@@ -231,40 +259,16 @@ main {
 
 h1, h2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
     color: #011893;
     margin-bottom: 20px;
 }
 
-/* Buttons */
-button, .custom-button, .back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    background: linear-gradient(45deg, #000C47, #011893);
-    color: #f4f4f4;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.custom-button {
-    width: 350px;
-    height: 80px;
-}
-
-.back-button {
-    width: 150px;
-    height: 50px;
-}
 
 button:hover {
     transform: scale(1.01);
+    cursor: pointer;
 }
 
-.custom-button:hover, .back-button:hover {
-    filter: brightness(1.2);
-    transform: scale(1.01);
-}
 
 /* Video */
 video {
@@ -291,51 +295,6 @@ video:hover {
     flex: 1;
     height: 90vh;
 }
-
-/* General Container */
-.slider-container {
-    position: relative;
-    height: 40vh; /* Adjustable height */
-    overflow: hidden; /* Hide slides outside the container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-/* Slides Wrapper */
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Each Slide */
-.slide {
-    flex: 1 0 100%; /* Each slide takes full container width */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button:disabled {
-    background: rgba(0, 0, 0, 0.2);
-    cursor: not-allowed;
-    opacity: 0;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    height: 40px;
-    background-color: rgb(173, 173, 173);
-    color: #f4f4f4;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 
 

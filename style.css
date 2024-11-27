@@ -448,9 +448,12 @@ footer {
     #slide2:checked ~ #controls label:nth-last-child(4),
     #slide3:checked ~ #controls label:nth-last-child(3),
     #slide4:checked ~ #controls label:nth-last-child(2) {
-        background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+        background: url(docs/img/la.svg) no-repeat;
+        background-size: contain;
+        background-position: center;
         float:left;
         margin: 0 0 0 0;
         display: block;
+        z-index: 4;
     }
 }

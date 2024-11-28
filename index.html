@@ -34,63 +34,93 @@
 
 
     <main>
-        <h1>Credentials</h1>
-        <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+        <div id="div1" style="height: 700px; background-color: grey;">
+            <h1>Monthly Reports</h1>
+            <p>We aim at delivering in depth analysis on a monthly basis. These could either be Equity Research, Industry sector overview or even Market Finance Strategy implementation.</p>
+        </div>
+        
+        
+        <div id="div2" style="height: 700px; background-color: #aaa;">
+            <h1>Credentials</h1>
+            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
 
-        <div id="slider">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <input type="radio" name="slider" id="slide4">
-            <div id="slides">
-                <div id="overflow">
-                    <div class="inner">
-                        <div class="slide slide1">
-                            <div class="slide-content">
-                                <h2>Equity Research</h2>
-                                <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
-                                <button onclick="location.href='page1.html'" class="r r1"></button>
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="inner">
+                            <div class="slide slide1">
+                                <div class="slide-content">
+                                    <h2>Equity Research</h2>
+                                    <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+                                    <button onclick="location.href='page1.html'" class="r r1"></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide slide2">
-                            <div class="slide-content">
-                                <h2>Statistical & Machine Learning</h2>
-                                <p>text</p>
-                                <video autoplay muted loop playsinline id="mov" class="rmov">
-                                    <source src="docs/movie.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                            <div class="slide slide2">
+                                <div class="slide-content">
+                                    <h2>Statistical & Machine Learning</h2>
+                                    <p>text</p>
+                                    <div class="video-container">
+                                        <video autoplay muted loop playsinline id="mov">
+                                            <source src="docs/movie.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide slide3">
-                            <div class="slide-content">
-                                <h2>Quant Library</h2>
-                                <p>text</p>
-                                <button onclick="location.href='algo.html'" class="r r3"></button>
+                            <div class="slide slide3">
+                                <div class="slide-content">
+                                    <h2>Quant Library</h2>
+                                    <p>text</p>
+                                    <button onclick="location.href='algo.html'" class="r r3"></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide slide4">
-                            <div class="slide-content">
-                                <h2>Others</h2>
-                                <p>text</p>
+                            <div class="slide slide4">
+                                <div class="slide-content">
+                                    <h2>Others</h2>
+                                    <p>text</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="controls">
-                <label for="slide1" onclick=resetSlider()></label>
-                <label for="slide2" onclick=resetSlider()></label>
-                <label for="slide3" onclick=resetSlider()></label>
-                <label for="slide4" onclick=resetSlider()></label>
-            </div>
-            <div id="bullets">
-                <label for="slide1" onclick=resetSlider()></label>
-                <label for="slide2" onclick=resetSlider()></label>
-                <label for="slide3" onclick=resetSlider()></label>
-                <label for="slide4" onclick=resetSlider()></label>
+                <div id="controls">
+                    <label for="slide1" onclick=resetSlider()></label>
+                    <label for="slide2" onclick=resetSlider()></label>
+                    <label for="slide3" onclick=resetSlider()></label>
+                    <label for="slide4" onclick=resetSlider()></label>
+                </div>
+                <div id="bullets">
+                    <label for="slide1" onclick=resetSlider()></label>
+                    <label for="slide2" onclick=resetSlider()></label>
+                    <label for="slide3" onclick=resetSlider()></label>
+                    <label for="slide4" onclick=resetSlider()></label>
+                </div>
             </div>
         </div>
+        
+
+        <div id="div3">
+            <h1>Coming soon</h1>
+            <ul>
+                <li>Inicio : Entertainment + Eventim + freight</li>
+                <li>Social Card</li>
+                <li>Portfolio -- link Position and Portfolio</li>
+                <li>SABR model</li>
+                <li>add volume as technical indicator to trigger BUY/SELL signals</li>
+                <li>Awesome Oscillator</li>
+                <li>Bollinger Bands Pattern Recognition</li>
+                <li>FROM OU to bond price</li>
+                <li>Ornstein Uhlenbeck model (to price bonds)</li>
+                <li>Epidemiological approach to news propagation in banking (knowing who owns what)</li>
+                <li>1D CNN -- christmas bull, seasonality, bonus period, etc.</li>
+            </ul>
+        </div>
+        
+        
     </main>
         
         

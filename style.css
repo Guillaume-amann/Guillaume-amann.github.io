@@ -79,8 +79,8 @@ body, html {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.45s;
+    transition: all 0.45s;
     background-color: #f4f4f4;
 }
 
@@ -88,6 +88,14 @@ main {
     max-width: 1200px;
     padding: 20px 10vw;
     background-color: #f4f4f4;
+}
+
+#div1, #div2 {
+    height: 100vh;
+}
+
+#slider {
+    height: 100%;
 }
 
 #slider input[type=radio] {
@@ -130,13 +138,15 @@ main {
 #slides .inner {
     transition: margin-left 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
-    height: 400px;
+    height: 500px;
 }
 
 #slides .slide {
     width: 25%;
     height: 100%;
     float: left;
+    border: grey solid 2px;
+    box-sizing: border-box;
 }
 
 .slide-content {
@@ -169,7 +179,7 @@ main {
 }
 
 #bullets {
-    margin: 130px 0 0;
+    margin: 140px 0 0;
     text-align: center;
 }
 
@@ -213,16 +223,14 @@ main {
     background: #444;
 }
 
-
-
-
-
-
 .r {
     width: 300px;
     height: 200px;
     border-radius: 5px;
     border: none;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
 }
 
 .r1 {
@@ -231,11 +239,12 @@ main {
 }
 
 .video-container {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
     width: 300px;
     height: 200px;
 }
-
 
 .video-container iframe,
 .video-container video {
@@ -266,26 +275,15 @@ main {
 
 
 
-h1, h2 {
+main h1, h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #011893;
     margin-bottom: 20px;
 }
 
-
 button:hover {
     transform: scale(1.01);
     cursor: pointer;
-}
-
-
-/* Video */
-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    transition: 0.3s;
 }
 
 video:hover {
@@ -307,8 +305,30 @@ video:hover {
 
 
 
+footer {
+    background-color: #333336;
+    color: #f4f4f4;
+    padding: 20px 10vw;
+}
 
+footer h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
 
+.hidden li {
+    opacity: 0;
+    filter: blur(3px);
+    line-height: 2;
+    transform: translateX(+100%);
+    transition: all .8s;
+}
+
+li.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* Font Definitions */
 @font-face {
@@ -333,7 +353,7 @@ video:hover {
         overflow: hidden;
         opacity: 0;
         transform: translateY(-20px); /* Move slightly off-screen */
-        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        transition: max-height .5s, opacity .5s, transform .3s;
     }
 
     .nav.open {
@@ -424,4 +444,19 @@ video:hover {
         display: block;
         z-index: 4;
     }
+
+    footer {
+        background-color: #333336;
+        color: #f4f4f4;
+        padding: 20px 10vw;
+    }
+    
+    footer h1, h2 {
+        border: #000C47 2px solid;
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 20px;
+        text-align: left; /* Or other value like 'center' if needed */
+        direction: ltr;
+    }
+    
 }

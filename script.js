@@ -9,27 +9,51 @@ hamburger.addEventListener('click', () => {
     resetSlider(); // Reset slider when hamburger is clicked
 });
 
+document.getElementById("mov").addEventListener("click", function () {
+    window.location.href = "page2.html";
+});
+
+// Observer for animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const delay = Array.from(entry.target.parentElement.children).indexOf(entry.target) * 100; // 100ms delay per item
+            entry.target.style.transitionDelay = `${delay}ms`;
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('ul.hidden li');
+hiddenElements.forEach((el) => observer.observe(el));
+
 // Slider functionality
 let autoplayInterval = 4000;
 let autoplayTimer = null;
-let autoplay = true;
+let autoplay = false; // Initially false
 let newIndex = 1;
 
-if (autoplay) {
-    autoplayTimer = setInterval(function() {
-        newIndex++;
-        navigateSlider();
-    }, autoplayInterval);
-}
-
-function resetSlider() {
-    clearInterval(autoplayTimer);
-    // Optionally restart autoplay if needed
-    if (autoplay) {
-        autoplayTimer = setInterval(function() {
+function startAutoplay() {
+    if (!autoplayTimer && autoplay) {
+        autoplayTimer = setInterval(() => {
             newIndex++;
             navigateSlider();
         }, autoplayInterval);
+    }
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayTimer);
+    autoplayTimer = null;
+}
+
+function resetSlider() {
+    stopAutoplay();
+    // Optionally restart autoplay if needed
+    if (autoplay) {
+        startAutoplay();
     }
 }
 
@@ -51,6 +75,20 @@ function navigateSlider() {
     }
 }
 
-document.getElementById("mov").addEventListener("click", function () {
-    window.location.href = "page2.html";
-  });
+// Observer for div2
+const div2 = document.getElementById('div2');
+
+const divObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            autoplay = true; // Enable autoplay
+            startAutoplay();
+        } else {
+            autoplay = false; // Disable autoplay
+            stopAutoplay();
+        }
+    });
+});
+
+// Observe div2
+divObserver.observe(div2);

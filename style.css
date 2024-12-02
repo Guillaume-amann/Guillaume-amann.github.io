@@ -90,6 +90,12 @@ main {
     background-color: #f4f4f4;
 }
 
+.top-right-img {
+    width: 150px; /* Scale the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Add some spacing between text and image */
+}
+
 #div1, #div2 {
     height: 100vh;
     margin-bottom: 10vh;

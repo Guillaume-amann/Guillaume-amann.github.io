@@ -240,6 +240,15 @@ main {
     right: 50px;
 }
 
+#report {
+    background: url("docs/img/monthly.png") no-repeat center center; 
+    background-size: contain;
+    width: 210px;
+    height: 297px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 .r1 {
     background: url('docs/img/convert.jpg') no-repeat center center; 
     background-size: contain;
@@ -274,8 +283,31 @@ main {
 }
 
 
+.back-button {
+    position: absolute;
+    background: linear-gradient(45deg, #000C47, #011893);
+    border-radius: 0 5px 5px 0;
+    border: none;
+    font-size: larger;
+    color: #f4f4f4;
+    margin-top: 5vh;
+    left: 0;
+    width: 60px;
+    height: 40px;
+    font-weight: 600;
+}
 
+.button-text {
+    font-size: 16px; /* Keeps text size fixed */
+    color: #f4f4f4; /* Text color */
+    pointer-events: none; /* Ensure text is not affected by scaling */
+}
 
+.back-button:hover {
+    transform: scaleX(1.5);
+    transform-origin: left;
+    transition: transform .8s;
+}
 
 
 

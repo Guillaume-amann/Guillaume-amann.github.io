@@ -90,12 +90,6 @@ main {
     background-color: #f4f4f4;
 }
 
-.top-right-img {
-    width: 150px; /* Scale the image */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Add some spacing between text and image */
-}
-
 #div1, #div2 {
     height: 100vh;
     margin-bottom: 10vh;
@@ -245,8 +239,7 @@ main {
     background-size: contain;
     width: 210px;
     height: 297px;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: none;
 }
 
 .r1 {
@@ -286,7 +279,7 @@ main {
 .back-button {
     position: absolute;
     background: linear-gradient(45deg, #000C47, #011893);
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 3px 3px 0;
     border: none;
     font-size: larger;
     color: #f4f4f4;

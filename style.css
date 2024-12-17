@@ -354,18 +354,18 @@ video:hover {
 
 .footer-left {
     width: 33%;
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
 .footer-right {
     width: 67%;
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
 footer {
-    padding: 20px;
+    padding: 0 2vw;
     display: flex;
     box-sizing: border-box;
     background-color: #333336;
@@ -383,6 +383,23 @@ footer h1, h2 {
 
 footer > * {
     padding: 0 10vw;
+}
+
+footer a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 24px; /* Adjust size */
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle; /* Align logo with text */
+    filter: grayscale(100%) brightness(100);
 }
 
 .hidden li {

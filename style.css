@@ -53,7 +53,7 @@ body, html {
 }
 
 .nav-menu li {
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .nav-menu a {
@@ -86,14 +86,61 @@ body, html {
 
 main {
     max-width: 1200px;
-    padding: 20px 10vw;
+    padding: 20px 10vw 0px 10vw;
     background-color: #f4f4f4;
 }
 
-#div1, #div2 {
-    height: 100vh;
-    margin-bottom: 10vh;
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    position: relative;
+    left: -10vw;
 }
+
+.section {
+    flex: 1; /* Divide container into equal parts */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.section:hover img {
+    filter: grayscale(0); /* Show color on hover */
+}
+
+.section .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    pointer-events: none; /* Prevent hovering effect on text separately */
+}
+
+.section:hover .text {
+    transform: translate(-50%, -50%) scale(1.1); /* Scale text only */
+}
+
+/* Optional Styling for Better Visibility */
+.section:nth-child(1) .text { text-shadow: 2px 2px 4px black; }
+.section:nth-child(2) .text { text-shadow: 2px 2px 4px black; }
+.section:nth-child(3) .text { text-shadow: 2px 2px 4px black; }
+
+
 
 #slider {
     height: 100%;
@@ -128,22 +175,22 @@ main {
     margin-left: -100%;
 }
 
-#slide3:checked ~ #slides .inner {
+/* #slide3:checked ~ #slides .inner {
     margin-left: -200%;
 }
 
 #slide4:checked ~ #slides .inner {
     margin-left: -300%;
-}
+} */
 
 #slides .inner {
     transition: margin-left 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    width: 400%;
-    height: 500px;
+    width: 100%;
+    height: 400px;
 }
 
 #slides .slide {
-    width: 25%;
+    width: 50%;
     height: 100%;
     float: left;
     /* border: grey solid 2px; */
@@ -171,7 +218,7 @@ main {
     position: relative;
     top: -245px;
     width: 50px;
-    height: 400px;
+    height: 100px;
     opacity: .4;
 }
 
@@ -180,7 +227,7 @@ main {
 }
 
 #bullets {
-    margin: 140px 0 0;
+    margin: 120px 0 0;
     text-align: center;
 }
 
@@ -189,7 +236,7 @@ main {
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background: #ccc;
+    background: #444;
     margin: 0 10px;
 }
 
@@ -221,10 +268,10 @@ main {
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4) {
-    background: #444;
+    background: #ccc;
 }
 
-.r {
+/* .r {
     width: 600px;
     height: 400px;
     border-radius: 5px;
@@ -232,8 +279,8 @@ main {
     position: absolute;
     bottom: 0;
     right: 50px;
-}
-
+} */
+/* 
 #report {
     background: url("docs/img/monthly.png") no-repeat center center; 
     background-size: contain;
@@ -273,38 +320,7 @@ main {
 .r4 {
     background: url('docs/img/convert.jpg') no-repeat center center; 
     background-size: contain; 
-}
-
-
-.back-button {
-    position: absolute;
-    background: linear-gradient(45deg, #000C47, #011893);
-    border-radius: 0 3px 3px 0;
-    border: none;
-    font-size: larger;
-    color: #f4f4f4;
-    margin-top: 5vh;
-    left: 0;
-    width: 60px;
-    height: 40px;
-    font-weight: 600;
-}
-
-.button-text {
-    font-size: 16px; /* Keeps text size fixed */
-    color: #f4f4f4; /* Text color */
-    pointer-events: none; /* Ensure text is not affected by scaling */
-}
-
-.back-button:hover {
-    transform: scaleX(1.5);
-    transform-origin: left;
-    transition: transform .8s;
-}
-
-
-
-
+} */
 
 
 main h1, h2 {
@@ -312,7 +328,7 @@ main h1, h2 {
     color: #011893;
     margin-bottom: 20px;
 }
-
+/* 
 button:hover {
     transform: scale(1.01);
     cursor: pointer;
@@ -321,13 +337,14 @@ button:hover {
 video:hover {
     transform: scale(1.01);
     cursor: pointer;
-}
+} */
 
 /* PDF Container */
 .pdf-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    width: 80vw;
 }
 
 .pdf-container object {
@@ -335,9 +352,22 @@ video:hover {
     height: 90vh;
 }
 
+.footer-left {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
+.footer-right {
+    width: 67%;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 footer {
+    padding: 20px;
+    display: flex;
+    box-sizing: border-box;
     background-color: #333336;
     color: #f4f4f4;
     overflow: hidden;
@@ -380,6 +410,22 @@ li.show {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pdf-container {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+
+    .pdf-container object {
+        height: 100vh;
+    }
+
     .nav {
         position: relative;
         top: 0;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn how to optimize your HTML head for SEO with our comprehensive guide. Improve your site's visibility and click-through rates today!">
     <meta property="image" content="docs/img/social-card.png">
-    <title>Inicio Financial</title>
+    <title>Guillaume Amann</title>
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/img/logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/docs/img/logo.png">
     <link rel="apple-touch-icon" href="/docs/img/logo.png">
@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <div class="header-top">
-          <a href="index.html" class="brand">Inicio<br>Financial</a>
+          <a href="index.html" class="brand">Guillaume<br>Amann</a>
           <button class="hamburger" id="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -25,52 +25,48 @@
         <nav class="nav" id="nav">
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="reports.html">Reports</a></li>
-            <li><a href="page1.html">Pitches</a></li>
+            <li><a href="page1.html">Finance</a></li>
             <li><a href="page2.html">AI</a></li>
-            <li><a href="algo.html">Quant Lib</a></li>
+            <li><a href="algo.html">Programming</a></li>
           </ul>
         </nav>
       </header>
 
     <main>
-        <div id="div1"> <!-- style="background-color: grey;"> -->
+        <div>
             <h1>Monthly Reports</h1>
             <p>We aim at delivering in depth analysis on a monthly basis. These could either be Equity Research, Industry sector overview or even Market Finance Strategy implementation.</p>
-            <a href="reports.html">See all reports</a>
-            <button onclick="location.href='reports.html'" id="report"></button>
         </div>
-        <div id="div2"> <!--style="background-color: #aaa;">-->
-            <h1>Credentials</h1>
-            <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
+
+        <div class="container">
+            <a href="page1.html" class="section"><img src="docs/img/convert.jpg" alt="Image 1"><span class="text">Finance</span></a>
+            <a href="page2.html" class="section"><img src="docs/img/image2.jpg" alt="Image 2"><span class="text">AI</span></a>
+            <a href="algo.html" class="section"><img src="docs/img/image3.jpg" alt="Image 3"><span class="text">Programming</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h1>My CV (UK/FR)</h1>
             <div id="slider">
                 <input type="radio" name="slider" id="slide1" checked>
                 <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
+                <!-- <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4"> -->
                 <div id="slides">
                     <div id="overflow">
                         <div class="inner">
                             <div class="slide slide1">
                                 <div class="slide-content">
-                                    <h2>Statistical & Machine Learning</h2>
-                                    <p>text</p>
-                                    <div class="video-container">
-                                        <video autoplay muted loop playsinline id="mov">
-                                            <source src="docs/movie.mp4" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
+                                    <img src="docs/img/res.png">
                                 </div>
                             </div>
                             <div class="slide slide2">
                                 <div class="slide-content">
-                                    <h2>Equity Research</h2>
-                                    <p>We have, during our time as Equity Research Analysts at Queen's Tower Capital, the Imperial College Investment Society's Fund, conducted in-depth analysis of American stocks which can be found here.</p>
-                                    <button onclick="location.href='page1.html'" class="r r1"></button>
+                                    <img src="docs/img/cv.png" alt="Image 1">
                                 </div>
                             </div>
-                            <div class="slide slide3">
+                            <!-- <div class="slide slide3">
                                 <div class="slide-content">
                                     <h2>Quant Library</h2>
                                     <p>text</p>
@@ -87,41 +83,50 @@
                                         </object>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div id="controls">
                     <label for="slide1" onclick=resetSlider()></label>
                     <label for="slide2" onclick=resetSlider()></label>
-                    <label for="slide3" onclick=resetSlider()></label>
-                    <label for="slide4" onclick=resetSlider()></label>
+                    <!-- <label for="slide3" onclick=resetSlider()></label>
+                    <label for="slide4" onclick=resetSlider()></label> -->
                 </div>
                 <div id="bullets">
                     <label for="slide1" onclick=resetSlider()></label>
                     <label for="slide2" onclick=resetSlider()></label>
-                    <label for="slide3" onclick=resetSlider()></label>
-                    <label for="slide4" onclick=resetSlider()></label>
+                    <!-- <label for="slide3" onclick=resetSlider()></label>
+                    <label for="slide4" onclick=resetSlider()></label> -->
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <h1>Coming soon</h1>
-        <ul class="hidden">
-            <li>Inicio : Entertainment + Eventim + freight</li>
-            <li>Social Card</li>
-            <li>Portfolio -- link Position and Portfolio</li>
-            <li>SABR model</li>
-            <li>add volume as technical indicator to trigger BUY/SELL signals</li>
-            <li>Awesome Oscillator</li>
-            <li>Bollinger Bands Pattern Recognition</li>
-            <li>FROM OU to bond price</li>
-            <li>Ornstein Uhlenbeck model (to price bonds)</li>
-            <li>Epidemiological approach to news propagation in banking (knowing who owns what)</li>
-            <li>1D CNN -- christmas bull, seasonality, bonus period, etc.</li>
-        </ul>
+        <div class="footer-right">
+            <h1>Coming soon</h1>
+            <ul class="hidden">
+                <!-- <li>Inicio : Entertainment + Eventim + freight</li> -->
+                <!-- <li>Social Card</li> -->
+                <li>Portfolio -- link Position and Portfolio</li>
+                <li>SABR model</li>
+                <li>add volume as technical indicator to trigger BUY/SELL signals</li>
+                <li>Awesome Oscillator</li>
+                <li>Bollinger Bands Pattern Recognition</li>
+                <!-- <li>Ornstein Uhlenbeck model (to price bonds)</li>
+                <li>Epidemiological approach to news propagation in banking (knowing who owns what)</li> -->
+                <li>1D CNN -- christmas bull, seasonality, bonus period, etc.</li>
+            </ul>
+            <p>Contact: <a href="tel:+1234567890" class="footer-link">+123 456 7890</a></p>
+            <p>
+              <a href="https://www.linkedin.com/in/amannguillaume/" target="_blank" class="footer-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/guillaume-amann" target="_blank" class="footer-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </p>
+        </div>
     </footer>
     
     <script src="script.js"></script>

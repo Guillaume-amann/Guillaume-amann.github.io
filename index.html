@@ -33,10 +33,16 @@
       </header>
 
     <main>
-        <div>
-            <h1>Monthly Reports</h1>
-            <p>We aim at delivering in depth analysis on a monthly basis. These could either be Equity Research, Industry sector overview or even Market Finance Strategy implementation.</p>
-        </div>
+        <div class="top">
+            <div class="part">
+                <h1>Who am I?</h1>
+                <p>Imperial College London and ESTP Paris graduate. Driven by a desire to venture off the beaten path, I focus on Statistical Learning, Quantitative Finance, and OOP.</p>
+            </div>
+            <div class="part">
+                <h1>What can I offer?</h1>
+                <p>With a strong commitment to rigor and precision, I bring expertise in designing and developing robust systems. Be it with C++, Python, or many else, I thrive on building scalable and efficient solutions.</p>  
+            </div>
+          </div>
 
         <div class="container">
             <a href="page1.html" class="section"><img src="docs/img/convert.jpg" alt="Image 1"><span class="text">Finance</span></a>
@@ -47,57 +53,11 @@
 
     <footer>
         <div class="footer-left">
-            <h1>My CV (UK/FR)</h1>
-            <div id="slider">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <!-- <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4"> -->
-                <div id="slides">
-                    <div id="overflow">
-                        <div class="inner">
-                            <div class="slide slide1">
-                                <div class="slide-content">
-                                    <img src="docs/img/res.png">
-                                </div>
-                            </div>
-                            <div class="slide slide2">
-                                <div class="slide-content">
-                                    <img src="docs/img/cv.png" alt="Image 1">
-                                </div>
-                            </div>
-                            <!-- <div class="slide slide3">
-                                <div class="slide-content">
-                                    <h2>Quant Library</h2>
-                                    <p>text</p>
-                                    <button onclick="location.href='algo.html'" class="r r3"></button>
-                                </div>
-                            </div>
-                            <div class="slide slide4">
-                                <div class="slide-content">
-                                    <h2>Others</h2>
-                                    <p>text</p>
-                                    <div class="pdf-container">
-                                        <object data="docs/pdf/Sustainability.pdf" type="Sustainability/pdf">
-                                            <p>PDF cannot be displayed. <a href="docs/pdf/test.pdf" target="_blank">Download the PDF</a>.</p>
-                                        </object>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div id="controls">
-                    <label for="slide1" onclick=resetSlider()></label>
-                    <label for="slide2" onclick=resetSlider()></label>
-                    <!-- <label for="slide3" onclick=resetSlider()></label>
-                    <label for="slide4" onclick=resetSlider()></label> -->
-                </div>
-                <div id="bullets">
-                    <label for="slide1" onclick=resetSlider()></label>
-                    <label for="slide2" onclick=resetSlider()></label>
-                    <!-- <label for="slide3" onclick=resetSlider()></label>
-                    <label for="slide4" onclick=resetSlider()></label> -->
+            <h1>My CV (<span class="clickable" onclick="flipImage()">UK/FR</span>)</h1>
+            <div class="cv-container" onclick="downloadPDF()">
+                <div class="flip-card">
+                    <img src="docs/img/res.png" alt="Front Image" class="front">
+                    <img src="docs/img/cv.png" alt="Back Image" class="back">
                 </div>
             </div>
         </div>
@@ -117,7 +77,7 @@
             </ul>
 
             <h1>Contact</h1>
-            <p>Tel: <a href="tel:+1234567890" class="footer-link">+123 456 7890</a></p>
+            <p>Tel: <a href="tel:+33646196593" class="footer-link">+33(0)646196593</a></p>
             <p><a href="https://www.linkedin.com/in/amannguillaume/" target="_blank" class="footer-link">
                 <img src="docs/img/lin.png" class="footer-logo">LinkedIn</a></p>
             <p><a href="https://github.com/guillaume-amann" target="_blank" class="footer-link">

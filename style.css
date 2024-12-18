@@ -86,9 +86,38 @@ body, html {
 
 main {
     max-width: 1200px;
-    padding: 20px 10vw 0px 10vw;
+    padding: 40px 10vw 0px 10vw;
     background-color: #f4f4f4;
 }
+
+.top {
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-between; /* Distributes space between the two parts */
+    align-items: center; /* Vertically aligns content within the container */
+    width: 100%; /* Full width of the page */
+    max-width: 1200px; /* Optional: limits the width */
+    margin: 0 auto; /* Centers the container horizontally */
+    margin-bottom: 40px;
+    gap: 100px;
+}
+
+.part {
+    flex: 1; /* Makes the two parts equal in size */
+    text-align: center; /* Centers the text horizontally within each part */
+}
+
+.part h1 {
+    font-size: 2rem;
+}
+
+.part p {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #555; /* Optional: makes the text a bit softer */
+}
+
+
+
 
 .container {
     display: flex;
@@ -124,7 +153,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     transition: transform 0.3s ease;
     z-index: 2;
@@ -142,202 +171,12 @@ main {
 
 
 
-#slider {
-    height: 100%;
-}
-
-#slider input[type=radio] {
-    display: none;
-}
-
-#slider label {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#slides {
-    padding: 0;
-    background: none;
-    position: relative;
-    z-index: 1;
-}
-
-#overflow {
-    width: 100%;
-    overflow: hidden;
-}
-
-#slide1:checked ~ #slides .inner {
-    margin-left: 0;
-}
-
-#slide2:checked ~ #slides .inner {
-    margin-left: -100%;
-}
-
-/* #slide3:checked ~ #slides .inner {
-    margin-left: -200%;
-}
-
-#slide4:checked ~ #slides .inner {
-    margin-left: -300%;
-} */
-
-#slides .inner {
-    transition: margin-left 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    width: 100%;
-    height: 400px;
-}
-
-#slides .slide {
-    width: 50%;
-    height: 100%;
-    float: left;
-    /* border: grey solid 2px; */
-    box-sizing: border-box;
-}
-
-.slide-content {
-    position: relative;
-    padding: 0 50px;
-    height: 100%;
-    max-width: 100%;
-}
-
-#controls {
-    margin: -155px 0 0 0;
-    height: 50px;
-    z-index: 3;
-    position: relative;
-}
-
-#controls label {
-    transition: opacity 0.2s ease-out;
-    background: none;
-    display: none;
-    position: relative;
-    top: -245px;
-    width: 50px;
-    height: 100px;
-    opacity: .4;
-}
-
-#controls label:hover {
-    opacity: 1;
-}
-
-#bullets {
-    margin: 120px 0 0;
-    text-align: center;
-}
-
-#bullets label {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background: #444;
-    margin: 0 10px;
-}
-
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1) {
-    background: url(docs/img/ra.svg) no-repeat;
-    background-size: contain;
-    background-position: center;
-    float:right;
-    margin: 0 -50px 0 0;
-    display: block;
-}
-
-#slide1:checked ~ #controls label:nth-last-child(1),
-#slide2:checked ~ #controls label:nth-last-child(4),
-#slide3:checked ~ #controls label:nth-last-child(3),
-#slide4:checked ~ #controls label:nth-last-child(2) {
-    background: url(docs/img/la.svg) no-repeat;
-    background-size: contain;
-    background-position: center;
-    float:left;
-    margin: 0 0 0 -50px;
-    display: block;
-}
-
-#slide1:checked ~ #bullets label:nth-child(1),
-#slide2:checked ~ #bullets label:nth-child(2),
-#slide3:checked ~ #bullets label:nth-child(3),
-#slide4:checked ~ #bullets label:nth-child(4) {
-    background: #ccc;
-}
-
-/* .r {
-    width: 600px;
-    height: 400px;
-    border-radius: 5px;
-    border: none;
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-} */
-/* 
-#report {
-    background: url("docs/img/monthly.png") no-repeat center center; 
-    background-size: contain;
-    width: 210px;
-    height: 297px;
-    border: none;
-}
-
-.r1 {
-    background: url('docs/img/convert.jpg') no-repeat center center; 
-    background-size: contain;
-}
-
-.video-container {
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-    width: 600px;
-    height: 400px;
-}
-
-.video-container iframe,
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.r3 {
-    background: url('docs/img/overview.jpg') no-repeat center center; 
-    background-position: bottom;
-    background-size: contain; 
-}
-
-.r4 {
-    background: url('docs/img/convert.jpg') no-repeat center center; 
-    background-size: contain; 
-} */
-
-
 main h1, h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #011893;
     margin-bottom: 20px;
 }
-/* 
-button:hover {
-    transform: scale(1.01);
-    cursor: pointer;
-}
 
-video:hover {
-    transform: scale(1.01);
-    cursor: pointer;
-} */
 
 /* PDF Container */
 .pdf-container {
@@ -390,6 +229,53 @@ footer a {
     text-decoration: none;
 }
 
+footer p {
+    padding-left: 20px;
+}
+
+/* General container styling */
+.cv-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.clickable:hover {
+    text-decoration: underline;
+}
+/* Flip-card for front and back images */
+.flip-card {
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transition: transform 0.8s;
+}
+
+.flip-card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Flip the card when active */
+.flip-card.active {
+    transform: rotateY(180deg);
+}
+
 footer a:hover {
     text-decoration: underline;
 }
@@ -427,6 +313,10 @@ li.show {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+
+    .top {
+        flex-direction: column;
+    }
 
     .container {
         display: flex;
@@ -571,6 +461,7 @@ li.show {
         background-color: #333336;
         color: #f4f4f4;
         padding: 0;
+        flex-direction: column;
         width: 100vw; /* Ensure the footer spans the full viewport width */
         position: relative; /* Keeps the footer properly aligned */
         left: 0;

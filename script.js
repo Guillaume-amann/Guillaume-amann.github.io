@@ -47,3 +47,12 @@ function downloadPDF() {
     link.click();
     document.body.removeChild(link);
 }
+
+function adjustViewportWidth() {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+}
+
+// Call on load and resize
+window.addEventListener('load', adjustViewportWidth);
+window.addEventListener('resize', adjustViewportWidth);

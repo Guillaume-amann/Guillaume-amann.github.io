@@ -122,7 +122,7 @@ main {
 .container {
     display: flex;
     height: 100vh; /* Full viewport height */
-    width: 100vw;
+    width: calc(100vw - var(--scrollbar-width, 0px));
     position: relative;
     left: -10vw;
 }
@@ -210,7 +210,7 @@ footer {
     background-color: #333336;
     color: #f4f4f4;
     overflow: hidden;
-    width: 100vw; /* Ensure the footer spans the full viewport width */
+    width: calc(100vw - var(--scrollbar-width, 0px));
     position: relative; /* Keeps the footer properly aligned */
     left: 0;
 }
@@ -316,6 +316,7 @@ li.show {
 
     .top {
         flex-direction: column;
+        gap: 30px;
     }
 
     .container {
@@ -394,82 +395,44 @@ li.show {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    #div1, #div2 {
-        margin-bottom: 20vh;
-    }
-
-    #controls {
-        margin: -155px 0 0 0;
-        height: 50px;
-        z-index: 3;
-        position: relative;
-    }
-
-    #controls label {
-        transition: opacity 0.2s ease-out;
-        background: none;
-        display: none; /* Ensure labels are visible */
-        position: relative; /* Reset positioning */
-        margin-top: -120px;
-        margin-left: 50px;
-        width: 40px; /* Adjust size for smaller screens */
-        height: 400px; /* Adjust size for smaller screens */
-        opacity: .4;
-    }
-
-    #slide1:checked ~ #controls label:nth-child(2),
-    #slide2:checked ~ #controls label:nth-child(3),
-    #slide3:checked ~ #controls label:nth-child(4),
-    #slide4:checked ~ #controls label:nth-child(1),
-    #slide1:checked ~ #controls label:nth-last-child(2),
-    #slide2:checked ~ #controls label:nth-last-child(3),
-    #slide3:checked ~ #controls label:nth-last-child(4),
-    #slide4:checked ~ #controls label:nth-last-child(1) {
-       margin: 0;
-    }
-
-    #slide1:checked ~ #controls label:nth-last-child(1),
-    #slide2:checked ~ #controls label:nth-last-child(4),
-    #slide3:checked ~ #controls label:nth-last-child(3),
-    #slide4:checked ~ #controls label:nth-last-child(2) {
-        background: url(docs/img/la.svg) no-repeat;
-        background-size: contain;
-        background-position: center;
-        float:left;
-        margin: 0 0 0 0;
-        display: block;
-        z-index: 4;
-    }
-
-    .r {
-        position: absolute;
-        bottom: 0;
-        right: 50px;
-        width: 80%;
-        border-radius: 5px;
-        border: none;
-    }
-    
-    .video-container {
-        position: absolute;
-        bottom: 0;
-        right: 50px;
-        width: 80%;
-    }    
-
     footer {
         background-color: #333336;
         color: #f4f4f4;
         padding: 0;
+        margin: 0;
         flex-direction: column;
-        width: 100vw; /* Ensure the footer spans the full viewport width */
+        width: 100%; /* Ensure the footer spans the full viewport width */
         position: relative; /* Keeps the footer properly aligned */
         left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
     }
-    
+
+    .footer-left {
+        width: 90vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cv-container {
+        position: relative;
+        left: 22.5%;
+    }
+
+
+    .footer-right {
+        width: 90vw;
+        padding: 0;
+        text-align: left;
+        margin-top: 0;
+    }
+
     footer h1, h2 {
         font-family: 'Times New Roman', Times, serif;
         margin-bottom: 20px;
         padding: 0 10vw;
+        text-align: center;
     }
 }
